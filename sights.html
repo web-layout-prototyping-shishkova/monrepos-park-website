@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Достопримечательности — Парк Монрепо</title>
+    <meta name="description" content="Что посмотреть в парке Монрепо: Храм Нептуна, остров Людвигштайн, усадебный дом и другие места.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container site-header__inner">
+        <a class="logo" href="index.html" aria-label="Парк Монрепо — на главную">
+            <span class="logo__mark" aria-hidden="true">
+                <span class="logo__dome"></span>
+                <span class="logo__columns"></span>
+                <span class="logo__base"></span>
+                <span class="logo__wave"></span>
+            </span>
+            <span class="logo__text">Монрепо<small>парк · Выборг</small></span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Основное меню">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="sights.html" aria-current="page">Достопримечательности</a></li>
+                <li><a href="visitors.html">Посетителям</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-title">
+        <div class="container">
+            <h1>Достопримечательности</h1>
+            <p>Места, ради которых стоит пройти парк от начала до конца.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="cards">
+                <article class="card">
+                    <img src="images/neptune-temple.jpg" alt="Храм Нептуна" loading="lazy">
+                    <div class="card__body">
+                        <h3>Храм Нептуна</h3>
+                        <p>Ротонда с колоннами на высокой скале над заливом — самый узнаваемый вид Монрепо. Отсюда открывается панорама на воду и острова.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/ludwigstein.jpg" alt="Остров Людвигштайн" loading="lazy">
+                    <div class="card__body">
+                        <h3>Остров Людвигштайн</h3>
+                        <p>Скалистый остров с фамильным некрополем семьи Николаи. Его называют «островом мёртвых» — здесь всегда тихо и немного таинственно.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/main-house.jpg" alt="Главный усадебный дом" loading="lazy">
+                    <div class="card__body">
+                        <h3>Усадебный дом</h3>
+                        <p>Деревянный дом в стиле классицизма — сердце усадьбы. Перед ним открывается парадная поляна, с которой начинается большинство прогулок.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/library.jpg" alt="Флигель-библиотека" loading="lazy">
+                    <div class="card__body">
+                        <h3>Флигель-библиотека</h3>
+                        <p>Небольшое здание рядом с главным домом, где хранилась богатая семейная библиотека Николаи. Сейчас в нём проходят выставки.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/chinese-bridge.jpg" alt="Китайский мостик" loading="lazy">
+                    <div class="card__body">
+                        <h3>Китайский мостик</h3>
+                        <p>Изящный мостик через протоку — дань моде XVIII века на всё «китайское». Одно из самых фотогеничных мест парка.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/rocks.jpg" alt="Гранитные скалы" loading="lazy">
+                    <div class="card__body">
+                        <h3>Гранитные скалы</h3>
+                        <p>Огромные валуны и скальные выходы, оставленные ледником. Тропы поднимаются на них к смотровым площадкам с видом на залив.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__grid">
+            <div>
+                <h3>Парк Монрепо</h3>
+                <address>Ленинградская область, г. Выборг,<br>остров Твердыш</address>
+            </div>
+            <div>
+                <h3>Разделы</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="sights.html">Достопримечательности</a></li>
+                    <li><a href="visitors.html">Посетителям</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>О сайте</h3>
+                <p>Учебный проект по дисциплине «Вёрстка и прототипирование», СПбПУ. Фото — автор сайта.</p>
+            </div>
+        </div>
+        <p class="site-footer__bottom">© 2026 Анастасия Шишкова</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

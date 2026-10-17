@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Посетителям — Парк Монрепо</title>
+    <meta name="description" content="Режим работы, билеты и как добраться до парка Монрепо в Выборге.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container site-header__inner">
+        <a class="logo" href="index.html" aria-label="Парк Монрепо — на главную">
+            <span class="logo__mark" aria-hidden="true">
+                <span class="logo__dome"></span>
+                <span class="logo__columns"></span>
+                <span class="logo__base"></span>
+                <span class="logo__wave"></span>
+            </span>
+            <span class="logo__text">Монрепо<small>парк · Выборг</small></span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Основное меню">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="sights.html">Достопримечательности</a></li>
+                <li><a href="visitors.html" aria-current="page">Посетителям</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-title">
+        <div class="container">
+            <h1>Посетителям</h1>
+            <p>Всё, что нужно знать перед поездкой в Монрепо.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="info-grid">
+                <section class="info-block">
+                    <h2>Режим работы</h2>
+                    <dl class="info-list">
+                        <div><dt>Май — сентябрь</dt><dd>10:00 — 20:00</dd></div>
+                        <div><dt>Октябрь — апрель</dt><dd>10:00 — 18:00</dd></div>
+                        <div><dt>Выставки</dt><dd>кроме понедельника</dd></div>
+                    </dl>
+                    <p class="note">Время указано для примера — уточняйте на официальном сайте музея-заповедника.</p>
+                </section>
+
+                <section class="info-block">
+                    <h2>Билеты</h2>
+                    <dl class="info-list">
+                        <div><dt>Взрослый</dt><dd>уточняйте</dd></div>
+                        <div><dt>Студенты, пенсионеры</dt><dd>льготный</dd></div>
+                        <div><dt>Дети до 7 лет</dt><dd>бесплатно</dd></div>
+                    </dl>
+                    <p class="note">Актуальные цены — в кассе у входа в парк и на официальном сайте.</p>
+                </section>
+
+                <section class="info-block">
+                    <h2>Как добраться</h2>
+                    <ul>
+                        <li><strong>Из Санкт-Петербурга</strong> — поездом «Ласточка» или электричкой с Финляндского вокзала до Выборга.</li>
+                        <li><strong>Из центра Выборга</strong> — на городском автобусе до остановки у парка или пешком через мост на остров Твердыш (около 30–40 минут).</li>
+                        <li><strong>На машине</strong> — по трассе «Скандинавия» (А-181), у входа есть парковка.</li>
+                    </ul>
+                </section>
+
+                <section class="info-block">
+                    <h2>Правила посещения</h2>
+                    <ul>
+                        <li>Ходите по тропам и не забирайтесь на ограждённые скалы.</li>
+                        <li>Не разводите костры и не оставляйте мусор.</li>
+                        <li>Собак выгуливайте на поводке.</li>
+                        <li>Берегите павильоны и скульптуры — это памятники.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--alt">
+        <div class="container">
+            <figure class="figure figure--wide">
+                <img src="images/bay.jpg" alt="Вид на Выборгский залив из парка" loading="lazy">
+                <figcaption>Лучшее время для прогулки — тихий вечер, когда залив отражает закат.</figcaption>
+            </figure>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__grid">
+            <div>
+                <h3>Парк Монрепо</h3>
+                <address>Ленинградская область, г. Выборг,<br>остров Твердыш</address>
+            </div>
+            <div>
+                <h3>Разделы</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="sights.html">Достопримечательности</a></li>
+                    <li><a href="visitors.html">Посетителям</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>О сайте</h3>
+                <p>Учебный проект по дисциплине «Вёрстка и прототипирование», СПбПУ. Фото — автор сайта.</p>
+            </div>
+        </div>
+        <p class="site-footer__bottom">© 2026 Анастасия Шишкова</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

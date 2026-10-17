@@ -1,0 +1,668 @@
+/* =========================================================
+   Парк Монрепо — общие стили сайта
+   Гамма «Лес и гранит», mobile-first
+   ========================================================= */
+
+/* ---------- 1. Переменные ---------- */
+:root {
+    --c-forest: #2f4a3a;      /* тёмно-зелёный — основной */
+    --c-forest-dark: #22372b;
+    --c-moss: #6b8f71;        /* мох */
+    --c-granite: #6e6e6a;     /* гранит */
+    --c-stone: #e4ded2;       /* светлый камень — рамки, заглушки */
+    --c-cream: #f6f2ea;       /* фон страницы */
+    --c-white: #fffdf9;
+    --c-water: #3f6e8c;       /* акцент — вода залива */
+    --c-text: #1f2a24;
+    --c-text-muted: #55605a;
+
+    --font-head: "PT Serif", Georgia, serif;
+    --font-body: "PT Sans", Arial, sans-serif;
+
+    --container: 1100px;
+    --gap: 24px;
+    --radius: 10px;
+    --shadow: 0 4px 18px rgba(31, 42, 36, 0.10);
+}
+
+/* ---------- 2. База ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--c-cream);
+    color: var(--c-text);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.65;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-head);
+    line-height: 1.25;
+    color: var(--c-forest);
+    margin: 0 0 0.6em;
+}
+
+h1 { font-size: clamp(1.9rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); }
+h3 { font-size: 1.25rem; }
+
+p {
+    margin: 0 0 1em;
+}
+
+a {
+    color: var(--c-water);
+}
+
+a:hover {
+    color: var(--c-forest);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    /* заглушка, пока фото не добавлено */
+    background: var(--c-stone);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.section {
+    padding: 48px 0;
+}
+
+.section--alt {
+    background: var(--c-white);
+}
+
+.lead {
+    font-size: 1.15rem;
+    color: var(--c-text-muted);
+}
+
+/* ---------- 3. Логотип (только CSS) ----------
+   Стилизованный Храм Нептуна: купол, колонны, основание, волна */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--c-white);
+}
+
+.logo:hover {
+    color: var(--c-white);
+}
+
+.logo__mark {
+    position: relative;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--c-forest-dark);
+    border: 2px solid var(--c-cream);
+    overflow: hidden;
+}
+
+/* купол */
+.logo__dome {
+    position: absolute;
+    left: 50%;
+    top: 9px;
+    width: 26px;
+    height: 13px;
+    transform: translateX(-50%);
+    background: var(--c-cream);
+    border-radius: 13px 13px 0 0;
+}
+
+/* шпиль на куполе */
+.logo__dome::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -4px;
+    width: 2px;
+    height: 5px;
+    transform: translateX(-50%);
+    background: var(--c-cream);
+}
+
+/* карниз под куполом */
+.logo__dome::after {
+    content: "";
+    position: absolute;
+    left: -3px;
+    bottom: -3px;
+    width: 32px;
+    height: 3px;
+    background: var(--c-cream);
+}
+
+/* колонны */
+.logo__columns {
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    width: 26px;
+    height: 13px;
+    transform: translateX(-50%);
+    background: repeating-linear-gradient(
+        to right,
+        var(--c-cream) 0 3px,
+        transparent 3px 7.66px
+    );
+}
+
+/* основание (ступени) */
+.logo__base {
+    position: absolute;
+    left: 50%;
+    top: 38px;
+    width: 34px;
+    height: 3px;
+    transform: translateX(-50%);
+    background: var(--c-cream);
+    box-shadow: 0 4px 0 var(--c-moss);
+}
+
+/* волна залива */
+.logo__wave {
+    position: absolute;
+    left: -6px;
+    right: -6px;
+    bottom: -10px;
+    height: 16px;
+    background: var(--c-water);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.logo__text {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+}
+
+.logo__text small {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* ---------- 4. Шапка и меню ---------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--c-forest);
+    box-shadow: var(--shadow);
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 76px;
+    gap: var(--gap);
+}
+
+.nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 2px;
+    background: var(--c-cream);
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--c-forest-dark);
+}
+
+.main-nav.is-open {
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px 16px 16px;
+}
+
+.main-nav a {
+    display: block;
+    padding: 12px 8px;
+    color: var(--c-cream);
+    text-decoration: none;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+    color: #fff;
+    box-shadow: inset 3px 0 0 var(--c-moss);
+}
+
+/* ---------- 5. Hero (главная) ---------- */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 70vh;
+    color: var(--c-white);
+    background: var(--c-forest-dark);
+    overflow: hidden;
+}
+
+.hero__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--c-granite);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(20, 32, 25, 0.85), rgba(20, 32, 25, 0.15) 60%);
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.hero h1 {
+    color: var(--c-white);
+    max-width: 14em;
+}
+
+.hero p {
+    max-width: 36em;
+    font-size: 1.15rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: var(--c-moss);
+    color: var(--c-white);
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: var(--c-water);
+    color: var(--c-white);
+}
+
+/* ---------- 6. Заголовок внутренних страниц ---------- */
+.page-title {
+    padding: 48px 0 40px;
+    background:
+        linear-gradient(135deg, rgba(107, 143, 113, 0.25), transparent 60%),
+        var(--c-forest);
+    color: var(--c-cream);
+}
+
+.page-title h1 {
+    color: var(--c-white);
+    margin-bottom: 0.3em;
+}
+
+.page-title p {
+    margin: 0;
+    max-width: 40em;
+    opacity: 0.9;
+}
+
+/* ---------- 7. Статья с картинками (текст + фото рядом) ---------- */
+.article {
+    max-width: 860px;
+}
+
+.article::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.figure {
+    margin: 0 0 1.2em;
+}
+
+.figure img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.figure--wide img {
+    aspect-ratio: 16 / 7;
+}
+
+.figure figcaption {
+    margin-top: 6px;
+    font-size: 0.88rem;
+    color: var(--c-text-muted);
+    font-style: italic;
+}
+
+/* ---------- 8. Карточки ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--c-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.card__body p:last-child {
+    margin-bottom: 0;
+}
+
+.card__link {
+    margin-top: auto;
+    font-weight: 700;
+}
+
+.card--link {
+    text-decoration: none;
+    color: inherit;
+    border-top: 4px solid var(--c-moss);
+    transition: transform 0.2s;
+}
+
+.card--link:hover {
+    transform: translateY(-4px);
+    color: inherit;
+}
+
+/* ---------- 9. Хронология (история) ---------- */
+.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 28px;
+    border-left: 3px solid var(--c-moss);
+}
+
+.timeline__item {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.timeline__item::before {
+    content: "";
+    position: absolute;
+    left: -38px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--c-cream);
+    border: 3px solid var(--c-forest);
+}
+
+.timeline__date {
+    display: inline-block;
+    margin-bottom: 4px;
+    padding: 2px 10px;
+    border-radius: 6px;
+    background: var(--c-forest);
+    color: var(--c-cream);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* ---------- 10. Информационные блоки (посетителям) ---------- */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+}
+
+.info-block {
+    padding: 24px;
+    background: var(--c-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--c-water);
+}
+
+.info-block ul {
+    margin: 0;
+    padding-left: 1.2em;
+}
+
+.info-list {
+    margin: 0;
+}
+
+.info-list div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--c-stone);
+}
+
+.info-list dt {
+    font-weight: 700;
+}
+
+.info-list dd {
+    margin: 0;
+    text-align: right;
+}
+
+.note {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: var(--c-text-muted);
+}
+
+/* ---------- 11. Подвал ---------- */
+.site-footer {
+    background: var(--c-forest-dark);
+    color: var(--c-stone);
+    padding: 40px 0 24px;
+    font-size: 0.95rem;
+}
+
+.site-footer a {
+    color: var(--c-cream);
+}
+
+.site-footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.site-footer h3 {
+    color: var(--c-cream);
+    font-size: 1.05rem;
+    margin-bottom: 0.5em;
+}
+
+.site-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer li {
+    margin-bottom: 4px;
+}
+
+.site-footer address {
+    font-style: normal;
+}
+
+.site-footer__bottom {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* =========================================================
+   Планшет: от 600px
+   ========================================================= */
+@media (min-width: 600px) {
+    .figure--left {
+        float: left;
+        width: 45%;
+        margin: 0.3em 24px 1em 0;
+    }
+
+    .figure--right {
+        float: right;
+        width: 45%;
+        margin: 0.3em 0 1em 24px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .site-footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================================================
+   Десктоп: от 960px
+   ========================================================= */
+@media (min-width: 960px) {
+    .section {
+        padding: 72px 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+        position: static;
+        background: none;
+    }
+
+    .main-nav ul {
+        display: flex;
+        gap: 4px;
+        padding: 0;
+    }
+
+    .main-nav a {
+        padding: 8px 14px;
+        border-bottom: none;
+        border-radius: 6px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+    .figure--left,
+    .figure--right {
+        width: 40%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .site-footer__grid {
+        grid-template-columns: 2fr 1fr 1.5fr;
+    }
+}
