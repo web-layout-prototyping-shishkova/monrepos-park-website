@@ -1,0 +1,5 @@
+# Настройки WebStorm / JetBrains
+.idea/
+
+# Служебные файлы macOS
+.DS_Store
