@@ -1,0 +1,124 @@
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.pic {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.guitar {
+    position: absolute;
+    inset: 0;
+    transform: rotate(40deg);
+    transform-origin: 50% 52%;
+    filter: drop-shadow(2px 3px 1px rgba(60, 50, 30, 0.28));
+}
+
+.guitar__body {
+    position: absolute;
+    left: 54px;
+    top: 86px;
+    width: 92px;
+    height: 96px;
+    background: linear-gradient(to bottom, #f8e7a2 0%, #f0d56b 42%, #c9923a 100%);
+    z-index: 2;
+    -webkit-mask-image:
+        radial-gradient(ellipse 26px 24px at 50% 30%, #000 99%, transparent 100%),
+        radial-gradient(ellipse 32px 28px at 50% 72%, #000 99%, transparent 100%);
+    mask-image:
+        radial-gradient(ellipse 26px 24px at 50% 30%, #000 99%, transparent 100%),
+        radial-gradient(ellipse 32px 28px at 50% 72%, #000 99%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-composite: source-over;
+    mask-composite: add;
+}
+
+.guitar__hole {
+    position: absolute;
+    left: 94px;
+    top: 109px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #3d2a1c 0 58%, #e6c56a 59% 74%, #b8893e 75% 100%);
+    z-index: 3;
+}
+
+.guitar__bridge {
+    position: absolute;
+    left: 90px;
+    top: 158px;
+    width: 20px;
+    height: 12px;
+    z-index: 4;
+    background: radial-gradient(circle at 50% 50%, #fff 0%, #fff 18%, #f07a72 48%, #e53935 100%);
+    clip-path: polygon(0 0, 42% 50%, 0 100%, 100% 100%, 58% 50%, 100% 0);
+}
+
+.guitar__neck {
+    position: absolute;
+    left: 95px;
+    top: 36px;
+    width: 10px;
+    height: 58px;
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0 9px,
+            rgba(70, 40, 20, 0.55) 9px 10px
+        ),
+        linear-gradient(to right, #a56b3c, #c48a55 50%, #8d552c);
+    z-index: 1;
+}
+
+.guitar__head {
+    position: absolute;
+    left: 87px;
+    top: 10px;
+    width: 26px;
+    height: 26px;
+    background: #8a4030;
+    z-index: 3;
+    clip-path: path("M 7 0 L 19 0 Q 19 7 26 7 L 26 19 Q 19 19 19 26 L 7 26 Q 7 19 0 19 L 0 7 Q 7 7 7 0 Z");
+}
+
+.guitar__head::before,
+.guitar__head::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #f6e08a;
+}
+
+.guitar__head::before {
+    left: 7px;
+    box-shadow: 0 6px 0 #f6e08a, 0 12px 0 #f6e08a;
+}
+
+.guitar__head::after {
+    right: 7px;
+    box-shadow: 0 6px 0 #f6e08a, 0 12px 0 #f6e08a;
+}
+
+.guitar__strings {
+    position: absolute;
+    left: 96px;
+    top: 16px;
+    width: 8px;
+    height: 146px;
+    z-index: 5;
+    background: repeating-linear-gradient(
+        to right,
+        #3a2a22 0 1px,
+        transparent 1px 2px
+    );
+}
