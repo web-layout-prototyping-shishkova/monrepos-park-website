@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flexbox — Парк Монрепо</title>
+    <meta name="description" content="Задание Flexbox, вариант 4: мальчик и кирпич.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flex.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container site-header__inner">
+        <a class="logo" href="index.html" aria-label="Парк Монрепо — на главную">
+            <span class="logo__mark" aria-hidden="true">
+                <span class="logo__dome"></span>
+                <span class="logo__columns"></span>
+                <span class="logo__base"></span>
+                <span class="logo__wave"></span>
+            </span>
+            <span class="logo__text">Монрепо<small>парк · Выборг</small></span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Основное меню">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="sights.html">Достопримечательности</a></li>
+                <li><a href="visitors.html">Посетителям</a></li>
+                <li><a href="works.html">Задания</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-title">
+        <div class="container">
+            <h1>Flexbox</h1>
+            <p>Вариант 4. Наведение и нажатие меняют картинку и слова.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="content">
+                <button class="flexbox" type="button">
+                    <img class="flexbox__boy flexbox__boy--stand" src="images/flex/boy1.png" alt="Мальчик">
+                    <p class="flexbox__text flexbox__text--guess">Это мяч? ...</p>
+                    <img class="flexbox__boy flexbox__boy--think" src="images/flex/boy2.png" alt="">
+                    <img class="flexbox__brick" src="images/flex/boy7.png" alt="Кирпич">
+                    <img class="flexbox__boy flexbox__boy--fall" src="images/flex/boy3.png" alt="">
+                    <p class="flexbox__text flexbox__text--brick">Это кирпич ...</p>
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__grid">
+            <div>
+                <h3>Парк Монрепо</h3>
+                <address>Ленинградская область, г. Выборг,<br>остров Твердыш</address>
+            </div>
+            <div>
+                <h3>Разделы</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="sights.html">Достопримечательности</a></li>
+                    <li><a href="visitors.html">Посетителям</a></li>
+                    <li><a href="works.html">Задания</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>О сайте</h3>
+                <p>Учебный проект по дисциплине «Вёрстка и прототипирование», СПбПУ.</p>
+            </div>
+        </div>
+        <p class="site-footer__bottom">© 2026 Анастасия Шишкова</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/flex.js"></script>
+</body>
+</html>
