@@ -1,18 +1,12 @@
-/* =========================================================
-   Парк Монрепо — общие стили сайта
-   Гамма «Лес и гранит», mobile-first
-   ========================================================= */
-
-/* ---------- 1. Переменные ---------- */
 :root {
-    --c-forest: #2f4a3a;      /* тёмно-зелёный — основной */
+    --c-forest: #2f4a3a;
     --c-forest-dark: #22372b;
-    --c-moss: #6b8f71;        /* мох */
-    --c-granite: #6e6e6a;     /* гранит */
-    --c-stone: #e4ded2;       /* светлый камень — рамки, заглушки */
-    --c-cream: #f6f2ea;       /* фон страницы */
+    --c-moss: #6b8f71;
+    --c-granite: #6e6e6a;
+    --c-stone: #e4ded2;
+    --c-cream: #f6f2ea;
     --c-white: #fffdf9;
-    --c-water: #3f6e8c;       /* акцент — вода залива */
+    --c-water: #3f6e8c;
     --c-text: #1f2a24;
     --c-text-muted: #55605a;
 
@@ -25,7 +19,6 @@
     --shadow: 0 4px 18px rgba(31, 42, 36, 0.10);
 }
 
-/* ---------- 2. База ---------- */
 *,
 *::before,
 *::after {
@@ -79,7 +72,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
-    /* заглушка, пока фото не добавлено */
+
     background: var(--c-stone);
 }
 
@@ -103,8 +96,6 @@ img {
     color: var(--c-text-muted);
 }
 
-/* ---------- 3. Логотип (только CSS) ----------
-   Стилизованный Храм Нептуна: купол, колонны, основание, волна */
 .logo {
     display: inline-flex;
     align-items: center;
@@ -128,7 +119,6 @@ img {
     overflow: hidden;
 }
 
-/* купол */
 .logo__dome {
     position: absolute;
     left: 50%;
@@ -140,7 +130,6 @@ img {
     border-radius: 13px 13px 0 0;
 }
 
-/* шпиль на куполе */
 .logo__dome::before {
     content: "";
     position: absolute;
@@ -152,7 +141,6 @@ img {
     background: var(--c-cream);
 }
 
-/* карниз под куполом */
 .logo__dome::after {
     content: "";
     position: absolute;
@@ -163,7 +151,6 @@ img {
     background: var(--c-cream);
 }
 
-/* колонны */
 .logo__columns {
     position: absolute;
     left: 50%;
@@ -178,7 +165,6 @@ img {
     );
 }
 
-/* основание (ступени) */
 .logo__base {
     position: absolute;
     left: 50%;
@@ -190,7 +176,6 @@ img {
     box-shadow: 0 4px 0 var(--c-moss);
 }
 
-/* волна залива */
 .logo__wave {
     position: absolute;
     left: -6px;
@@ -219,7 +204,6 @@ img {
     opacity: 0.8;
 }
 
-/* ---------- 4. Шапка и меню ---------- */
 .site-header {
     position: sticky;
     top: 0;
@@ -295,7 +279,6 @@ img {
     box-shadow: inset 3px 0 0 var(--c-moss);
 }
 
-/* ---------- 5. Hero (главная) ---------- */
 .hero {
     position: relative;
     display: flex;
@@ -355,12 +338,9 @@ img {
     color: var(--c-white);
 }
 
-/* ---------- 6. Заголовок внутренних страниц ---------- */
 .page-title {
     padding: 48px 0 40px;
-    background:
-        linear-gradient(135deg, rgba(107, 143, 113, 0.25), transparent 60%),
-        var(--c-forest);
+    background: var(--c-forest);
     color: var(--c-cream);
 }
 
@@ -371,13 +351,7 @@ img {
 
 .page-title p {
     margin: 0;
-    max-width: 40em;
     opacity: 0.9;
-}
-
-/* ---------- 7. Статья с картинками (текст + фото рядом) ---------- */
-.article {
-    max-width: 860px;
 }
 
 .article::after {
@@ -409,7 +383,6 @@ img {
     font-style: italic;
 }
 
-/* ---------- 8. Карточки ---------- */
 .cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -451,15 +424,12 @@ img {
     text-decoration: none;
     color: inherit;
     border-top: 4px solid var(--c-moss);
-    transition: transform 0.2s;
 }
 
 .card--link:hover {
-    transform: translateY(-4px);
     color: inherit;
 }
 
-/* ---------- 9. Хронология (история) ---------- */
 .timeline {
     list-style: none;
     margin: 0;
@@ -495,7 +465,6 @@ img {
     font-size: 0.9rem;
 }
 
-/* ---------- 10. Информационные блоки (посетителям) ---------- */
 .info-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -536,13 +505,6 @@ img {
     text-align: right;
 }
 
-.note {
-    margin-top: 12px;
-    font-size: 0.9rem;
-    color: var(--c-text-muted);
-}
-
-/* ---------- 11. Подвал ---------- */
 .site-footer {
     background: var(--c-forest-dark);
     color: var(--c-stone);
@@ -588,9 +550,6 @@ img {
     opacity: 0.8;
 }
 
-/* =========================================================
-   Планшет: от 600px
-   ========================================================= */
 @media (min-width: 600px) {
     .figure--left {
         float: left;
@@ -617,9 +576,6 @@ img {
     }
 }
 
-/* =========================================================
-   Десктоп: от 960px
-   ========================================================= */
 @media (min-width: 960px) {
     .section {
         padding: 72px 0;
