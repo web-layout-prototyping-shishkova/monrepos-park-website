@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Животные — Парк Монрепо</title>
+    <meta name="description" content="Задание на перетаскивание, вариант 3: животные парка по группам.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/drag.css">
+</head>
+<body>
+
+<div data-include="header"></div>
+
+<main>
+    <section class="page-title">
+        <div class="container">
+            <h1>Животные парка</h1>
+            <p>Вариант 3. Разложить обитателей по группам.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="content">
+                <p>У залива живут утки и синицы, на лугах бабочки и стрекозы, в лесу белки и зайцы. Фигуры стоят повернутыми. Поверните каждое прямо и перетащите в свою группу.</p>
+
+                <div class="sort">
+                    <div class="sort__bar">
+                        <button class="sort__turn" type="button" disabled>Повернуть</button>
+                    </div>
+
+                    <div class="sort__pile">
+                        <div class="animal" data-kind="beast">
+                            <div class="animal__body" role="img" aria-label="Заяц">
+                                <svg viewBox="0 0 64 64">
+                                    <ellipse cx="27" cy="20" rx="4" ry="13" fill="#e4ded2" transform="rotate(-12 27 20)"/>
+                                    <ellipse cx="38" cy="18" rx="4" ry="13" fill="#e4ded2" transform="rotate(10 38 18)"/>
+                                    <ellipse cx="27" cy="22" rx="2" ry="8" fill="#f0c2ba" transform="rotate(-12 27 22)"/>
+                                    <ellipse cx="38" cy="20" rx="2" ry="8" fill="#f0c2ba" transform="rotate(10 38 20)"/>
+                                    <ellipse cx="36" cy="44" rx="16" ry="12" fill="#e4ded2"/>
+                                    <circle cx="50" cy="36" r="8" fill="#e4ded2"/>
+                                    <circle cx="53" cy="34" r="1.5" fill="#1f2a24"/>
+                                    <circle cx="22" cy="46" r="4" fill="#fffdf9"/>
+                                </svg>
+                            </div>
+                            <span class="animal__name">Заяц</span>
+                        </div>
+
+                        <div class="animal" data-kind="insect">
+                            <div class="animal__body" role="img" aria-label="Бабочка">
+                                <svg viewBox="0 0 64 64">
+                                    <ellipse cx="18" cy="28" rx="14" ry="10" fill="#e07a5f" transform="rotate(-28 18 28)"/>
+                                    <ellipse cx="46" cy="28" rx="14" ry="10" fill="#e07a5f" transform="rotate(28 46 28)"/>
+                                    <ellipse cx="20" cy="44" rx="10" ry="8" fill="#f2c14e" transform="rotate(18 20 44)"/>
+                                    <ellipse cx="44" cy="44" rx="10" ry="8" fill="#f2c14e" transform="rotate(-18 44 44)"/>
+                                    <rect x="30" y="22" width="4" height="28" rx="2" fill="#2f4a3a"/>
+                                    <circle cx="32" cy="20" r="3.2" fill="#2f4a3a"/>
+                                    <path d="M30 18 Q24 8 28 14" fill="none" stroke="#2f4a3a" stroke-width="1.4"/>
+                                    <path d="M34 18 Q40 8 36 14" fill="none" stroke="#2f4a3a" stroke-width="1.4"/>
+                                </svg>
+                            </div>
+                            <span class="animal__name">Бабочка</span>
+                        </div>
+
+                        <div class="animal" data-kind="bird">
+                            <div class="animal__body" role="img" aria-label="Утка">
+                                <svg viewBox="0 0 64 64">
+                                    <ellipse cx="28" cy="40" rx="18" ry="12" fill="#f0c14e"/>
+                                    <circle cx="46" cy="30" r="11" fill="#f0c14e"/>
+                                    <polygon points="54,28 64,33 54,38" fill="#e07a2f"/>
+                                    <circle cx="49" cy="28" r="1.6" fill="#1f2a24"/>
+                                    <ellipse cx="22" cy="38" rx="8" ry="5" fill="#e2b03a"/>
+                                    <ellipse cx="20" cy="50" rx="7" ry="3" fill="#e07a2f"/>
+                                </svg>
+                            </div>
+                            <span class="animal__name">Утка</span>
+                        </div>
+
+                        <div class="animal" data-kind="insect">
+                            <div class="animal__body" role="img" aria-label="Стрекоза">
+                                <svg viewBox="0 0 64 64">
+                                    <ellipse cx="16" cy="30" rx="14" ry="6" fill="#9ec9d6" opacity="0.9" transform="rotate(-24 16 30)"/>
+                                    <ellipse cx="48" cy="30" rx="14" ry="6" fill="#9ec9d6" opacity="0.9" transform="rotate(24 48 30)"/>
+                                    <ellipse cx="18" cy="42" rx="12" ry="5" fill="#7eb4c4" opacity="0.9" transform="rotate(16 18 42)"/>
+                                    <ellipse cx="46" cy="42" rx="12" ry="5" fill="#7eb4c4" opacity="0.9" transform="rotate(-16 46 42)"/>
+                                    <ellipse cx="32" cy="40" rx="4" ry="16" fill="#3f6e8c"/>
+                                    <circle cx="32" cy="20" r="5" fill="#2f4a3a"/>
+                                    <circle cx="30" cy="19" r="1.1" fill="#fff"/>
+                                    <circle cx="34" cy="19" r="1.1" fill="#fff"/>
+                                </svg>
+                            </div>
+                            <span class="animal__name">Стрекоза</span>
+                        </div>
+
+                        <div class="animal" data-kind="beast">
+                            <div class="animal__body" role="img" aria-label="Белка">
+                                <svg viewBox="0 0 64 64">
+                                    <path d="M16 50 C6 30 16 14 28 22 C22 34 20 42 24 52 Z" fill="#c4783a"/>
+                                    <ellipse cx="38" cy="44" rx="14" ry="11" fill="#d4894a"/>
+                                    <circle cx="50" cy="34" r="9" fill="#d4894a"/>
+                                    <circle cx="53" cy="32" r="1.5" fill="#1f2a24"/>
+                                    <ellipse cx="44" cy="26" rx="3" ry="6" fill="#c4783a" transform="rotate(-15 44 26)"/>
+                                    <ellipse cx="56" cy="36" rx="3" ry="2" fill="#f2c14e"/>
+                                </svg>
+                            </div>
+                            <span class="animal__name">Белка</span>
+                        </div>
+
+                        <div class="animal" data-kind="bird">
+                            <div class="animal__body" role="img" aria-label="Синица">
+                                <svg viewBox="0 0 64 64">
+                                    <ellipse cx="34" cy="42" rx="16" ry="14" fill="#f2d04b"/>
+                                    <path d="M32 36 L36 54 L28 54 Z" fill="#1f2a24"/>
+                                    <circle cx="46" cy="30" r="11" fill="#3f6e8c"/>
+                                    <path d="M38 24 Q46 16 54 24 Q48 20 46 26 Q42 20 38 24" fill="#2f4a3a"/>
+                                    <circle cx="50" cy="32" r="6" fill="#fffdf9"/>
+                                    <circle cx="52" cy="31" r="1.5" fill="#1f2a24"/>
+                                    <polygon points="54,32 63,35 54,38" fill="#1f2a24"/>
+                                    <path d="M24 38 Q14 46 22 52 Q28 46 30 40" fill="#6b8f71"/>
+                                </svg>
+                            </div>
+                            <span class="animal__name">Синица</span>
+                        </div>
+                    </div>
+
+                    <div class="sort__groups">
+                        <div class="sort__group" data-kind="bird">
+                            <h3>Птицы</h3>
+                            <div class="sort__drop"></div>
+                        </div>
+                        <div class="sort__group" data-kind="insect">
+                            <h3>Насекомые</h3>
+                            <div class="sort__drop"></div>
+                        </div>
+                        <div class="sort__group" data-kind="beast">
+                            <h3>Звери</h3>
+                            <div class="sort__drop"></div>
+                        </div>
+                    </div>
+
+                    <p class="sort__done">Все животные на своих местах</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div data-include="footer"></div>
+
+<script src="js/layout.js"></script>
+<script src="js/drag.js"></script>
+</body>
+</html>
